@@ -11,19 +11,11 @@ class Communication extends Thread implements Runnable{
     public void run() {
 
         try {
-            //declaration et initialisation des flux
-            //pour la communication avec le client
-            //je vais essaye de faire en sorte que la
-            //communication s'effectue selon une syntaxe
-            //precise et predefini
+        
             in = new BufferedReader(new InputStreamReader(SocketConnection
                     .getInputStream()));
             out = new PrintWriter(SocketConnection.getOutputStream(), true);
-            //fin de declaration des flux
-            //tableau de fichier
-            //ce code devra etre optimise pour arrive a faire des tableau
-            //dynamiqe
-            //declaration des fichier
+          
             File f = new File("");
             String chemin = f.getAbsolutePath();
             File f2 = new File(chemin);
